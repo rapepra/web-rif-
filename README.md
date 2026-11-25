@@ -22,10 +22,9 @@ docs/jsonld/                Copia del JSON-LD para revisarlo
 
 ## Verla en local
 
-Los enlaces usan rutas absolutas (`/contacto/`), igual que en producción. Por eso hay que abrirla con un servidor y no con doble clic:
+Basta con **abrir `index.html` con doble clic**. Las rutas son relativas (`css/estilos.css`, `../contacto/`), así que funcionan igual en local y en el hosting. Al abrirla desde el disco (`file://`), `js/app.js` hace que los enlaces a carpetas abran su `index.html`. En el hosting ese ajuste no se aplica y las URLs se quedan limpias (`/contacto/`).
 
-- VS Code: extensión **Live Server**, clic derecho en `index.html` → *Open with Live Server*.
-- O en la terminal: `python3 -m http.server 8000` → http://localhost:8000
+Excepción: `404.html` usa rutas absolutas (`/css/…`) porque el servidor la muestra en cualquier URL. Para verla bien en local, usa un servidor (`python3 -m http.server 8000` o Live Server en VS Code).
 
 ## Editar sin romper nada
 

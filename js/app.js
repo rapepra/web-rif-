@@ -7,6 +7,16 @@
     for (var k in extra) o[k] = extra[k];
     w.dataLayer.push(o);
   }
+  /* ── 0. Abrir con doble clic (file://): los enlaces a carpetas («contacto/») apuntan a su index.html.
+        En un servidor o hosting no hace nada: allí las URLs limpias funcionan solas. ── */
+  if (location.protocol === 'file:') d.querySelectorAll('a[href]').forEach(function (a) {
+    if (a.hasAttribute('data-pendiente')) return;
+    var h = a.getAttribute('href');
+    if (/^[a-z]+:/i.test(h) || h.charAt(0) === '#') return;
+    var i = h.indexOf('#'), ruta = i < 0 ? h : h.slice(0, i), ancla = i < 0 ? '' : h.slice(i);
+    if (ruta.slice(-1) === '/') a.setAttribute('href', ruta + 'index.html' + ancla);
+  });
+
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
 
   /* ── 1. Abierto ahora / Cerrado (hora de Madrid). Festivos: no contemplados [CONFIRMAR calendario]. ── */
@@ -52,7 +62,7 @@
     /* Prototipo: páginas previstas en la arquitectura pero aún no desarrolladas */
     if (a.hasAttribute('data-pendiente')) {
       e.preventDefault();
-      toast('Página prevista: <b>' + href + '</b><br>Se construye con la misma plantilla que «Desatascos en Ermua».');
+      toast('Página prevista: <b>/' + href.replace(/^(\.\.\/)+|^\.\//, '') + '</b><br>Se construye con la misma plantilla que «Desatascos en Ermua».');
     }
   });
   var s75 = false;
