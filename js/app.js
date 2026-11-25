@@ -9,6 +9,12 @@
   }
   /* ── 0. Abrir con doble clic (file://): los enlaces a carpetas («contacto/») apuntan a su index.html.
         En un servidor o hosting no hace nada: allí las URLs limpias funcionan solas. ── */
+  /* Con file:// el navegador bloquea las fuentes web: se carga una copia incrustada (fonts/archivo-rif.js). */
+  if (location.protocol === 'file:' && d.currentScript) {
+    var fs = d.createElement('script');
+    fs.src = d.currentScript.src.replace(/js\/app\.js.*$/, 'fonts/archivo-rif.js');
+    d.head.appendChild(fs);
+  }
   if (location.protocol === 'file:') d.querySelectorAll('a[href]').forEach(function (a) {
     if (a.hasAttribute('data-pendiente')) return;
     var h = a.getAttribute('href');
@@ -43,12 +49,12 @@
   function pintaChips() {
     var e = estado();
     d.querySelectorAll('[data-chip]').forEach(function (c) {
-      c.classList.toggle('chip--open', e.abierto);
-      c.classList.toggle('chip--closed', !e.abierto);
+      c.classList.toggle('estado--abierto', e.abierto);
+      c.classList.toggle('estado--cerrado', !e.abierto);
       c.querySelector('[data-chip-text]').textContent = e.txt;
     });
     var hoy = ahora().dia;
-    d.querySelectorAll('[data-dia]').forEach(function (r) { r.classList.toggle('is-today', r.getAttribute('data-dia').split(',').indexOf(String(hoy)) > -1); });
+    d.querySelectorAll('[data-dia]').forEach(function (r) { r.classList.toggle('hoy', r.getAttribute('data-dia').split(',').indexOf(String(hoy)) > -1); });
   }
   pintaChips(); setInterval(pintaChips, 60000);
 

@@ -10,7 +10,8 @@
 
   
 
-  <meta name="theme-color" content="#061430">
+  <meta name="theme-color" content="#0A2565">
+  <link rel="preload" href="/fonts/archivo-rif.woff2" as="font" type="font/woff2" crossorigin>
   <meta name="format-detection" content="telephone=no">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -35,116 +36,127 @@
 <link rel="stylesheet" href="/css/estilos.css"></head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
-  <header class="hdr">
-  <div class="wrap hdr__in">
-    <a class="logo" href="/">
-  <span class="logo__mark" aria-hidden="true">
-    <svg width="20" height="24" viewBox="0 0 20 24"><path d="M10 1C8 6 2 10 2 15.5A8 8 0 0 0 18 15.5C18 10 12 6 10 1Z" fill="#FFB020"></path><path d="M6.5 16a3.5 3.5 0 0 0 3.5 3.5" stroke="#0A1F3D" stroke-width="2" stroke-linecap="round" fill="none"></path></svg>
-  </span>
-  <span>Fontanería <b>RIF</b><small>Ermua · Bizkaia</small></span>
-</a>
-    <nav class="nav" aria-label="Principal">
-        <a href="/#servicios">Servicios</a><a href="/#nosotros">Nosotros</a><a href="/#proyectos">Proyectos</a><a href="/#opiniones">Opiniones</a><a href="/#zona">Zona</a><a href="/#preguntas">Preguntas</a><a href="/contacto/">Contacto</a>
-      </nav>
-    <div class="lang" aria-label="Idioma">
-        <a href="/" hreflang="es" lang="es" aria-current="true">ES</a>
-        <a href="/eu/" hreflang="eu" lang="eu">EU</a>
-      </div>
-    <a class="btn btn--accent hdr__tel" href="tel:+34605711081" data-ub="cabecera">
-      <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>605 711 081
+  <div class="barra">
+  <div class="wrap barra__in">
+    <p class="estado" data-chip>
+  <span class="estado__punto" aria-hidden="true"></span>
+  <span data-chip-text>L–V 9:00–13:00 y 15:00–19:00</span>
+</p>
+    <span class="barra__dir">C/ Marqués de Valdespina, 48260 Ermua, Bizkaia</span>
+    <div class="idioma" aria-label="Idioma">
+      <a href="/" hreflang="es" lang="es" aria-current="true">ES</a>
+      <a href="/eu/" hreflang="eu" lang="eu">EU</a>
+    </div>
+  </div>
+</div>
+<header class="cab">
+  <div class="wrap cab__in">
+    <a class="marca" href="/">
+      <svg viewBox="0 0 108 52" width="108" height="52" aria-hidden="true">
+  <rect x="2" y="2" width="104" height="48" rx="9" fill="#fff" stroke="#2E2E2E" stroke-width="3.5"></rect>
+  <g fill="#E30613">
+    <path fill-rule="evenodd" d="M17 10h20c7 0 10.5 4 10.5 9 0 4-2 7-6 8.4L48.5 42H38.4l-6-13.2H26.4V42H17Zm9.4 7v5.6h8.6c2 0 3.2-1.1 3.2-2.8S37 17 35 17Z"></path>
+    <path d="M52 10h9.4v32H52z"></path>
+    <path d="M66 10h25v7.4H75.4v5.4h13.4v7.2H75.4V42H66z"></path>
+  </g>
+</svg>
+      <span class="marca__txt"><b>Fontanería RIF</b>Ermua · Bizkaia</span>
     </a>
+    <nav class="nav" aria-label="Principal"><a href="/#servicios">Servicios</a><a href="/#equipo">Equipo</a><a href="/#proyectos">Proyectos</a><a href="/#opiniones">Opiniones</a><a href="/#zona">Zona</a><a href="/contacto/">Contacto</a></nav>
+    <a class="cab__tel" href="tel:+34605711081" data-ub="cabecera">
+      <small>Llámanos</small><span>605 711 081</span>
+    </a>
+    <a class="btn btn--rojo cab__cta" href="#contacto">Pedir presupuesto</a>
     <details class="menu">
-        <summary aria-label="Abrir menú"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg></summary>
-        <nav class="menu__panel" aria-label="Menú móvil">
-          <a href="/#servicios">Servicios</a><a href="/#nosotros">Nosotros</a><a href="/#proyectos">Proyectos</a><a href="/#opiniones">Opiniones</a><a href="/#zona">Zona</a><a href="/#preguntas">Preguntas</a><a href="/contacto/">Contacto</a>
-        </nav>
+        <summary aria-label="Abrir menú"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg></summary>
+        <nav class="menu__panel" aria-label="Menú móvil"><a href="/#servicios">Servicios</a><a href="/#equipo">Equipo</a><a href="/#proyectos">Proyectos</a><a href="/#opiniones">Opiniones</a><a href="/#zona">Zona</a><a href="/contacto/">Contacto</a></nav>
       </details>
   </div>
 </header>
   <main id="contenido">
 
-  <section class="hero lhero" aria-labelledby="h1">
-    <div class="wrap" style="max-width:820px">
-      <p class="chip">Error 404</p>
-      <h1 id="h1">Esta página se nos ha <em>atascado</em></h1>
-      <p class="hero__sub">La dirección no existe o ha cambiado. Si tienes una avería, lo más rápido es llamarnos.</p>
-      <div class="hero__ctas">
-        <a class="btn btn--accent btn--lg" href="tel:+34605711081" data-ub="404"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>605 711 081</a>
-        <a class="btn btn--ghost btn--lg" href="/"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10a2 2 0 0 1 .71-1.53l7-6a2 2 0 0 1 2.58 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/></svg>Ir al inicio</a>
+  <section class="landing-hero" aria-labelledby="h1">
+    <div class="wrap dos dos--mitad">
+      <div>
+        <p class="rotulo">Página no encontrada</p>
+        <h1 id="h1"><span class="h1-gran">Esta página se ha <em>atascado</em></span><span class="h1-peq">La dirección no existe o ha cambiado.</span></h1>
+        <div class="acciones" style="margin-top:32px">
+          <a class="btn btn--rojo" href="tel:+34605711081" data-ub="404"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="btn__num">605 711 081</span></a>
+          <a class="flecha" href="/">Ir al inicio <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="wrap" style="max-width:820px">
-      <h2 style="font-size:1.5rem">Quizá buscabas</h2>
-      <div class="links">
-        <a href="/desatascos-ermua/">Desatascos en Ermua<svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/fugas-y-humedades/">Fugas y humedades<svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/videoinspeccion-tuberias/">Videoinspección con cámara<svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/calderas-ermua/">Calderas en Ermua<svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/aerotermia-ermua/">Aerotermia en Ermua<svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/reforma-bano-ermua/">Reforma de baño en Ermua<svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/bajantes-comunidades/">Bajantes para comunidades<svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
-        <a href="/contacto/">Contacto<svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+      <div>
+        <p class="rotulo" style="margin-bottom:0">Quizá buscabas</p>
+        <div class="enlaces" style="border-top:0">
+          <a href="/desatascos-ermua/">Desatascos en Ermua<svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/fugas-y-humedades/">Fugas y humedades<svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/videoinspeccion-tuberias/">Videoinspección con cámara<svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/calderas-ermua/">Calderas en Ermua<svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/aerotermia-ermua/">Aerotermia en Ermua<svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/reforma-bano-ermua/">Reforma de baño en Ermua<svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a href="/bajantes-comunidades/">Bajantes para comunidades<svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+          <a href="/contacto/">Contacto<svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
 
   </main>
-  <footer class="ftr">
+  <footer class="cierre">
   <div class="wrap">
-    <div class="ftr__grid">
-      <div class="ftr__brand">
-        <a class="logo" href="/">
-  <span class="logo__mark" aria-hidden="true">
-    <svg width="20" height="24" viewBox="0 0 20 24"><path d="M10 1C8 6 2 10 2 15.5A8 8 0 0 0 18 15.5C18 10 12 6 10 1Z" fill="#FFB020"></path><path d="M6.5 16a3.5 3.5 0 0 0 3.5 3.5" stroke="#0A1F3D" stroke-width="2" stroke-linecap="round" fill="none"></path></svg>
-  </span>
-  <span>Fontanería <b>RIF</b><small>Ermua · Bizkaia</small></span>
-</a>
-        <p style="margin-top:16px">Fontanería, gas, calefacción, reformas y desatascos en Ermua y alrededores. Más de 20 años de oficio.</p>
-        <address>
-          <strong style="color:#fff">Fontanería RIF</strong><br>
-          C/ Marqués de Valdespina<br>
-          48260 Ermua, Bizkaia<br>
-          Móvil: <a href="tel:+34605711081" data-ub="pie">605 711 081</a><br>
-          Fijo: <a href="tel:+34943579580" data-ub="pie">943 579 580</a><br>
-          <a href="mailto:riffontaneria@gmail.com">riffontaneria@gmail.com</a>
-        </address>
-      </div>
-      <div>
-        <h2>Horario</h2>
-        <p>Lunes a viernes<br>9:00–13:00 y 15:00–19:00</p>
-        <p>Sábado y domingo<br>Cerrado</p>
-      </div>
 
-          <div>
-            <h2>Servicios</h2>
-            <ul><li><a href="/desatascos-ermua/">Desatascos en Ermua</a></li><li><a href="/fugas-y-humedades/" data-pendiente>Fugas y humedades</a></li><li><a href="/videoinspeccion-tuberias/" data-pendiente>Videoinspección con cámara</a></li><li><a href="/calderas-ermua/" data-pendiente>Calderas en Ermua</a></li><li><a href="/aerotermia-ermua/" data-pendiente>Aerotermia en Ermua</a></li><li><a href="/reforma-bano-ermua/" data-pendiente>Reforma de baño en Ermua</a></li><li><a href="/bajantes-comunidades/" data-pendiente>Bajantes para comunidades</a></li></ul>
-          </div>
-          <div>
-            <h2>Zona</h2>
-            <ul>
-              <li><a href="/">Fontanero en Ermua</a></li><li><a href="/fontanero-eibar/" data-pendiente>Fontanero en Eibar</a></li><li><a href="/fontanero-mallabia/" data-pendiente>Fontanero en Mallabia</a></li><li><a href="/fontanero-zaldibar/" data-pendiente>Fontanero en Zaldibar</a></li><li><a href="/fontanero-elgeta/" data-pendiente>Fontanero en Elgeta</a></li><li><a href="/fontanero-berriz/" data-pendiente>Fontanero en Berriz</a></li><li><a href="/fontanero-durango/" data-pendiente>Fontanero en Durango</a></li><li><a href="/fontanero-elorrio/" data-pendiente>Fontanero en Elorrio</a></li>
-            </ul>
-          </div>
+    <div class="pie">
+      <div class="pie__rejilla">
+        <div class="pie__marca">
+          <svg viewBox="0 0 108 52" width="108" height="52" aria-hidden="true">
+  <rect x="2" y="2" width="104" height="48" rx="9" fill="none" stroke="#fff" stroke-width="3.5"></rect>
+  <g fill="#fff">
+    <path fill-rule="evenodd" d="M17 10h20c7 0 10.5 4 10.5 9 0 4-2 7-6 8.4L48.5 42H38.4l-6-13.2H26.4V42H17Zm9.4 7v5.6h8.6c2 0 3.2-1.1 3.2-2.8S37 17 35 17Z"></path>
+    <path d="M52 10h9.4v32H52z"></path>
+    <path d="M66 10h25v7.4H75.4v5.4h13.4v7.2H75.4V42H66z"></path>
+  </g>
+</svg>
+          <address>
+            Fontanería RIF<br>
+            C/ Marqués de Valdespina<br>
+            48260 Ermua, Bizkaia<br>
+            <a href="tel:+34605711081" data-ub="pie">605 711 081</a> · <a href="tel:+34943579580" data-ub="pie">943 579 580</a><br>
+            <a href="mailto:riffontaneria@gmail.com">riffontaneria@gmail.com</a>
+          </address>
+        </div>
+        <div>
+          <h2>Horario</h2>
+          <p>Lunes a viernes<br>9:00–13:00 y 15:00–19:00</p>
+          <p>Sábado y domingo<br>Cerrado</p>
+        </div>
 
-    </div>
-    <div class="ftr__bottom">
-      <span>© 2026 Fontanería RIF. Todos los derechos reservados.</span>
-      <nav aria-label="Legal">
-        <a href="/aviso-legal/">Aviso legal</a>
-        <a href="/privacidad/">Privacidad y cookies</a>
-        <button type="button" class="linkbtn" data-cookie-open>Configurar cookies</button>
-      </nav>
+            <div>
+              <h2>Servicios</h2>
+              <ul><li><a href="/desatascos-ermua/">Desatascos en Ermua</a></li><li><a href="/fugas-y-humedades/" data-pendiente>Fugas y humedades</a></li><li><a href="/videoinspeccion-tuberias/" data-pendiente>Videoinspección con cámara</a></li><li><a href="/calderas-ermua/" data-pendiente>Calderas en Ermua</a></li><li><a href="/aerotermia-ermua/" data-pendiente>Aerotermia en Ermua</a></li><li><a href="/reforma-bano-ermua/" data-pendiente>Reforma de baño en Ermua</a></li><li><a href="/bajantes-comunidades/" data-pendiente>Bajantes para comunidades</a></li></ul>
+            </div>
+            <div>
+              <h2>Zona</h2>
+              <ul><li><a href="/">Fontanero en Ermua</a></li><li><a href="/fontanero-eibar/" data-pendiente>Fontanero en Eibar</a></li><li><a href="/fontanero-mallabia/" data-pendiente>Fontanero en Mallabia</a></li><li><a href="/fontanero-zaldibar/" data-pendiente>Fontanero en Zaldibar</a></li><li><a href="/fontanero-elgeta/" data-pendiente>Fontanero en Elgeta</a></li><li><a href="/fontanero-berriz/" data-pendiente>Fontanero en Berriz</a></li><li><a href="/fontanero-durango/" data-pendiente>Fontanero en Durango</a></li><li><a href="/fontanero-elorrio/" data-pendiente>Fontanero en Elorrio</a></li></ul>
+            </div>
+
+      </div>
+      <div class="pie__base">
+        <span>© 2026 Fontanería RIF</span>
+        <nav aria-label="Legal">
+          <a href="/aviso-legal/">Aviso legal</a>
+          <a href="/privacidad/">Privacidad y cookies</a>
+          <button type="button" class="boton-texto" data-cookie-open>Configurar cookies</button>
+        </nav>
+      </div>
     </div>
   </div>
 </footer>
-  <nav class="mbar" aria-label="Contacto rápido">
-  <a class="mbar__call" href="tel:+34605711081" data-ub="barra_movil"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Llamar</a>
-  <a class="mbar__wa" href="https://wa.me/34605711081?text=Hola%2C%20os%20escribo%20desde%20la%20web.%20Necesito%20ayuda%20con%3A%20" target="_blank" rel="noopener" data-ub="barra_movil"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" stroke-width="2.6"/></svg>WhatsApp</a>
-  <a class="mbar__quote" href="/contacto/" data-ub="barra_movil"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5M8 13h8M8 17h5"/></svg>Presupuesto</a>
+  <nav class="barra-movil" aria-label="Contacto rápido">
+  <a class="bm-llamar" href="tel:+34605711081" data-ub="barra_movil"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Llamar</a>
+  <a class="bm-wa" href="https://wa.me/34605711081?text=Hola%2C%20os%20escribo%20desde%20la%20web.%20Necesito%20ayuda%20con%3A%20" target="_blank" rel="noopener" data-ub="barra_movil"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" stroke-width="2.6"/></svg>WhatsApp</a>
+  <a class="bm-pres" href="/contacto/" data-ub="barra_movil">Presupuesto</a>
 </nav>
-  <div class="cookie" role="dialog" aria-modal="false" aria-labelledby="cookie-t" data-cookie hidden>
-  <p id="cookie-t"><strong>Cookies.</strong> Usamos cookies de analítica solo si las aceptas, para saber qué partes de la web funcionan mejor. <a href="/privacidad/#cookies">Ver la política de cookies</a>.</p>
-  <div class="cookie__btns">
-    <button type="button" class="btn btn--ghost" data-cookie-no>Rechazar</button>
-    <button type="button" class="btn btn--light" data-cookie-si>Aceptar</button>
+  <div class="cookies" role="dialog" aria-modal="false" aria-labelledby="cookies-t" data-cookie hidden>
+  <p id="cookies-t">Usamos cookies de analítica solo si las aceptas. <a href="/privacidad/#cookies">Ver la política de cookies</a>.</p>
+  <div class="cookies__btns">
+    <button type="button" class="btn btn--linea" data-cookie-no>Rechazar</button>
+    <button type="button" class="btn btn--tinta" data-cookie-si>Aceptar</button>
   </div>
 </div>
-  <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
+  <div class="aviso" role="status" aria-live="polite" data-toast hidden></div>
   <script src="/js/app.js" defer></script>
 </body></html>
