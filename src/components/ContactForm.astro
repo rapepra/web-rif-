@@ -1,0 +1,48 @@
+---
+// Formulario corto con validación nativa. En el prototipo no envía: muestra la confirmación y lanza el evento.
+// PRODUCCIÓN: conectar `action` a un endpoint (Netlify Forms, Formspree, Cloudflare Worker…) y
+// lanzar `envio_formulario` solo cuando el servidor confirme el envío.
+import Icon from './Icon.astro';
+interface Props { id?: string; servicio?: string; titulo?: string; headingLevel?: 'h2' | 'h3' }
+const { id = 'f', servicio = '', titulo = 'Pide presupuesto sin compromiso', headingLevel = 'h2' } = Astro.props;
+const H = headingLevel;
+const opciones = [
+  'Desatasco', 'Fuga o humedad', 'Caldera o termo', 'Calefacción / aerotermia', 'Aire acondicionado',
+  'Instalación de gas', 'Reforma de baño o cocina', 'Bajantes / comunidad', 'Otro',
+];
+---
+<div class="card">
+  <H id={`${id}-t`}>{titulo}</H>
+  <p class="field__hint" style="font-size:.95rem;margin-bottom:20px">Déjanos 4 datos y te llamamos nosotros.</p>
+  <form class="form" action="#contacto" method="post" data-form aria-labelledby={`${id}-t`}>
+    <div class="form__row">
+      <div class="field">
+        <label for={`${id}-nombre`}>Nombre</label>
+        <input id={`${id}-nombre`} name="nombre" type="text" autocomplete="name" required minlength="2" />
+      </div>
+      <div class="field">
+        <label for={`${id}-tel`}>Teléfono</label>
+        <input id={`${id}-tel`} name="telefono" type="tel" inputmode="tel" autocomplete="tel" required pattern="[+0-9 ]{9,16}" aria-describedby={`${id}-tel-h`} />
+        <span class="field__hint" id={`${id}-tel-h`}>Ej.: 600 123 456</span>
+      </div>
+    </div>
+    <div class="field">
+      <label for={`${id}-serv`}>¿Qué necesitas?</label>
+      <select id={`${id}-serv`} name="servicio" required>
+        <option value="" disabled selected={!servicio}>Elige un servicio</option>
+        {opciones.map((o) => <option selected={o === servicio}>{o}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for={`${id}-msg`}>Cuéntanos qué pasa <span class="field__hint">(opcional)</span></label>
+      <textarea id={`${id}-msg`} name="mensaje" rows="3"></textarea>
+    </div>
+    <div class="hp" aria-hidden="true"><label>No rellenar <input name="web" tabindex="-1" autocomplete="off" /></label></div>
+    <label class="check"><input type="checkbox" name="privacidad" required /> <span>He leído la <a href="/privacidad/">política de privacidad</a> y acepto que Fontanería RIF use mis datos para responder a esta solicitud.</span></label>
+    <button class="btn btn--accent btn--lg btn--block" type="submit"><Icon name="doc" size={20} />Pedir presupuesto</button>
+  </form>
+  <div class="form__ok" role="status" hidden data-form-ok>
+    <Icon name="check" size={28} />
+    <div><strong>¡Recibido! Te llamamos en horario de atención.</strong> Si es urgente, llama ahora al 605 711 081.</div>
+  </div>
+</div>

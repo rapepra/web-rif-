@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import OpenChip from '../components/OpenChip.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContactForm from '../components/ContactForm.astro';
+import MapFacade from '../components/MapFacade.astro';
+import { negocio } from '../data/negocio';
+import { grafo, plumber, webPage, breadcrumbs } from '../lib/schema';
+
+const path = '/contacto/';
+const title = 'Contacto · Fontaneros en Ermua | Fontanería RIF';
+const description = 'Contacta con Fontanería RIF en Ermua: 605 711 081, WhatsApp o formulario. L–V 9:00–13:00 y 15:00–19:00. Presupuesto sin compromiso.';
+const migas = [{ nombre: 'Inicio', path: '/' }, { nombre: 'Contacto', path }];
+const schema = grafo(plumber(), webPage({ path, titulo: title, tipo: 'ContactPage' }), breadcrumbs(migas));
+---
+<Base title={title} description={description} path={path} schema={schema}>
+  <section class="hero lhero" aria-labelledby="h1">
+    <div class="wrap hero__grid">
+      <div>
+        <Breadcrumbs migas={migas} />
+        <OpenChip />
+        <h1 id="h1">Contacto: <em>Fontanería RIF en Ermua</em></h1>
+        <p class="answer">Llama al {negocio.telefono.display} (móvil) o al {negocio.fijo.display} (fijo), escríbenos por WhatsApp o rellena el formulario. Estamos en {negocio.direccionTexto}, de lunes a viernes de 9:00 a 13:00 y de 15:00 a 19:00.</p>
+        <div class="nap">
+          <div class="nap__item"><Icon name="phone" /><div><strong>Móvil</strong><a href={`tel:${negocio.telefono.e164}`} data-ub="contacto">{negocio.telefono.display}</a></div></div>
+          <div class="nap__item"><Icon name="phone" /><div><strong>Fijo</strong><a href={`tel:${negocio.fijo.e164}`} data-ub="contacto">{negocio.fijo.display}</a></div></div>
+          <div class="nap__item"><Icon name="chat" /><div><strong>WhatsApp</strong><a href={negocio.whatsapp} target="_blank" rel="noopener" data-ub="contacto">Escríbenos</a></div></div>
+          <div class="nap__item"><Icon name="mail" /><div><strong>Email</strong><a href={`mailto:${negocio.email}`}>{negocio.email}</a></div></div>
+        </div>
+      </div>
+      <div id="contacto"><ContactForm id="f-contacto" /></div>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="donde-t">
+    <div class="wrap zone">
+      <div>
+        <h2 class="h2" id="donde-t">Dónde estamos</h2>
+        <address class="lead" style="font-style:normal">{negocio.nombre}<br />{negocio.direccion.calle}<br />{negocio.direccion.cp} {negocio.direccion.localidad}, {negocio.direccion.provincia}</address>
+        <p>Trabajamos en Ermua y alrededores: Eibar, Mallabia, Zaldibar, Elgeta, Berriz, Durango y Elorrio.</p>
+      </div>
+      <MapFacade />
+    </div>
+  </section>
+</Base>

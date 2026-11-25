@@ -1,0 +1,29 @@
+---
+/**
+ * VERSIÓN EN EUSKERA — ESTRUCTURA PREPARADA, CONTENIDO POR TRADUCIR.
+ * Mientras no esté traducida: EU_LISTO = false en src/data/negocio.ts (quita el hreflang eu-ES y pone noindex aquí).
+ * Los textos en euskera de esta página son provisionales y deben validarse por una persona nativa.
+ */
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { negocio, EU_LISTO } from '../../data/negocio';
+---
+<Base
+  lang="eu"
+  title="Iturginak Ermuan | Fontanería RIF"
+  description="Fontanería RIF, iturginak Ermuan 20 urte baino gehiagoz. Deitu 605 711 081 zenbakira. Konpromisorik gabeko aurrekontua."
+  path="/eu/" esPath="/" euPath="/eu/" noindex={!EU_LISTO} quoteHref={`tel:${negocio.telefono.e164}`}
+>
+  <section class="hero lhero" aria-labelledby="h1">
+    <div class="wrap" style="max-width:860px">
+      <p class="tbd">[ITZULPENA ZAIN · TRADUCCIÓN PENDIENTE DE VALIDAR]</p>
+      <h1 id="h1" style="margin-top:20px">Iturginak Ermuan: <em>konponketak, galdarak eta bainugelen berrikuntzak</em></h1>
+      <p class="hero__sub">Euskarazko webgunea prestatzen ari gara. Bitartean, deitu edo idatzi WhatsApp bidez.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--accent btn--lg" href={`tel:${negocio.telefono.e164}`} data-ub="eu_hero"><Icon name="phone" />{negocio.telefono.display}</a>
+        <a class="btn btn--wa btn--lg" href={negocio.whatsapp} target="_blank" rel="noopener" data-ub="eu_hero"><Icon name="chat" />WhatsApp</a>
+        <a class="btn btn--ghost btn--lg" href="/" hreflang="es" lang="es"><Icon name="arrow" />Gaztelaniaz</a>
+      </div>
+    </div>
+  </section>
+</Base>

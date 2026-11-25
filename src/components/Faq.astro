@@ -1,0 +1,13 @@
+---
+import { marcas, type Faq } from '../data/negocio';
+interface Props { faqs: Faq[] }
+const { faqs } = Astro.props;
+---
+<div class="faq">
+  {faqs.map((f, i) => (
+    <details open={i === 0}>
+      <summary><h3>{f.q}</h3></summary>
+      <div class="faq__a"><p set:html={marcas(f.a)} /></div>
+    </details>
+  ))}
+</div>

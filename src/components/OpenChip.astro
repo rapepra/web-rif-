@@ -1,0 +1,10 @@
+---
+// Chip «Abierto ahora / Cerrado». El texto inicial (sin JS) es el horario; el script lo actualiza con la hora de Madrid.
+import { negocio } from '../data/negocio';
+interface Props { light?: boolean }
+const { light = false } = Astro.props;
+---
+<p class:list={['chip', { 'chip--light': light }]} data-chip>
+  <span class="chip__dot" aria-hidden="true"></span>
+  <span data-chip-text>{negocio.horarioCorto}</span>
+</p>

@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+import { negocio } from '../data/negocio';
+interface Props { quoteHref?: string; labels?: [string, string, string] }
+const { quoteHref = '#contacto', labels = ['Llamar', 'WhatsApp', 'Presupuesto'] } = Astro.props;
+---
+<nav class="mbar" aria-label="Contacto rápido">
+  <a class="mbar__call" href={`tel:${negocio.telefono.e164}`} data-ub="barra_movil"><Icon name="phone" size={22} />{labels[0]}</a>
+  <a class="mbar__wa" href={negocio.whatsapp} target="_blank" rel="noopener" data-ub="barra_movil"><Icon name="chat" size={22} />{labels[1]}</a>
+  <a class="mbar__quote" href={quoteHref} data-ub="barra_movil"><Icon name="doc" size={22} />{labels[2]}</a>
+</nav>

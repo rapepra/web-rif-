@@ -1,0 +1,1233 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://fontaneriarif.com/#web",
+      "url": "https://fontaneriarif.com/",
+      "name": "Fontanería RIF",
+      "inLanguage": "es-ES",
+      "publisher": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      }
+    },
+    {
+      "@type": "Plumber",
+      "@id": "https://fontaneriarif.com/#negocio",
+      "name": "Fontanería RIF",
+      "alternateName": "RIF Desatascos",
+      "description": "Fontaneros en Ermua (Bizkaia) con más de 20 años de experiencia: desatascos, fugas, calderas, calefacción y aerotermia, aire acondicionado, gas y reformas de baño y cocina para particulares y comunidades.",
+      "url": "https://fontaneriarif.com/",
+      "logo": "https://fontaneriarif.com/logo.svg",
+      "image": [
+        "https://fontaneriarif.com/og-fontaneria-rif.jpg"
+      ],
+      "telephone": "+34605711081",
+      "email": "riffontaneria@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C/ Marqués de Valdespina",
+        "addressLocality": "Ermua",
+        "postalCode": "48260",
+        "addressRegion": "Bizkaia",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.1868,
+        "longitude": -2.5011
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Fontaner%C3%ADa%20RIF%2C%20C%2F%20Marqu%C3%A9s%20de%20Valdespina%2C%2048260%20Ermua",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "15:00",
+          "closes": "19:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+34605711081",
+          "contactType": "customer service",
+          "areaServed": "ES",
+          "availableLanguage": [
+            "es",
+            "eu"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+34943579580",
+          "contactType": "customer service",
+          "areaServed": "ES",
+          "availableLanguage": [
+            "es",
+            "eu"
+          ]
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ],
+      "knowsLanguage": [
+        "es",
+        "eu"
+      ],
+      "priceRange": "€€",
+      "sameAs": []
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://fontaneriarif.com/#webpage",
+      "url": "https://fontaneriarif.com/",
+      "name": "Fontaneros en Ermua · Calderas y reformas | Fontanería RIF",
+      "inLanguage": "es-ES",
+      "isPartOf": {
+        "@id": "https://fontaneriarif.com/#web"
+      },
+      "about": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/desatascos-ermua/#servicio-desatascos",
+      "name": "Desatascos",
+      "serviceType": "Desatascos",
+      "description": "Desatascamos fregaderos, inodoros, tuberías y arquetas en Ermua y alrededores, y eliminamos los malos olores. Lo hace RIF Desatascos, nuestra unidad especializada, en pisos, locales y comunidades.",
+      "url": "https://fontaneriarif.com/desatascos-ermua/",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/fugas-y-humedades/#servicio-fugas",
+      "name": "Fugas y humedades",
+      "serviceType": "Fugas y humedades",
+      "description": "Buscamos el origen de la fuga o la humedad y la reparamos, junto con los daños que haya dejado en paredes, techos o suelos: tenemos albañiles y pintores en el equipo.",
+      "url": "https://fontaneriarif.com/fugas-y-humedades/",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/videoinspeccion-tuberias/#servicio-videoinspeccion",
+      "name": "Videoinspección de tuberías",
+      "serviceType": "Videoinspección de tuberías",
+      "description": "Revisamos el interior de la tubería con una cámara CCTV robotizada, de 75 a 1200 mm de diámetro, para ver atascos, roturas o raíces sin levantar el suelo.",
+      "url": "https://fontaneriarif.com/videoinspeccion-tuberias/",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/#servicio-fontaneria",
+      "name": "Fontanería general",
+      "serviceType": "Fontanería general",
+      "description": "Reparamos e instalamos grifos, cisternas, tuberías y llaves de paso en viviendas y locales de Ermua y la comarca.",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/calderas-ermua/#servicio-calderas",
+      "name": "Calderas y termos",
+      "serviceType": "Calderas y termos",
+      "description": "Instalamos, cambiamos y reparamos calderas de gas, gasoil, eléctricas, de condensación y de pellets, y también termos. Somos instaladores autorizados de calderas.",
+      "url": "https://fontaneriarif.com/calderas-ermua/",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/aerotermia-ermua/#servicio-aerotermia",
+      "name": "Calefacción y aerotermia",
+      "serviceType": "Calefacción y aerotermia",
+      "description": "La aerotermia calienta la casa y el agua con la energía del aire exterior: hasta un 80 % de la energía que usa es gratuita. Estudiamos si encaja en tu vivienda y la instalamos.",
+      "url": "https://fontaneriarif.com/aerotermia-ermua/",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/#servicio-aire",
+      "name": "Aire acondicionado",
+      "serviceType": "Aire acondicionado",
+      "description": "Instalamos aire acondicionado en viviendas y locales. La parte eléctrica la hacen nuestros propios electricistas.",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/#servicio-gas",
+      "name": "Instalaciones de gas",
+      "serviceType": "Instalaciones de gas",
+      "description": "Hacemos instalaciones de gas nuevas y modificaciones en viviendas y locales de Ermua y alrededores.",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/reforma-bano-ermua/#servicio-reformas",
+      "name": "Reforma integral de baño y cocina",
+      "serviceType": "Reforma integral de baño y cocina",
+      "description": "Reformamos baños y cocinas completos con nuestro propio equipo, sin que tengas que coordinar gremios. También adaptamos baños para personas con movilidad reducida.",
+      "url": "https://fontaneriarif.com/reforma-bano-ermua/",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/#servicio-banera",
+      "name": "Cambio de bañera por plato de ducha",
+      "serviceType": "Cambio de bañera por plato de ducha",
+      "description": "Quitamos la bañera y ponemos un plato de ducha: más fácil y seguro para entrar y salir, sobre todo para personas mayores.",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/#servicio-mamparas",
+      "name": "Mamparas a medida y muebles de baño",
+      "serviceType": "Mamparas a medida y muebles de baño",
+      "description": "Medimos e instalamos mamparas a medida y muebles de baño para aprovechar bien el espacio.",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/bajantes-comunidades/#servicio-bajantes",
+      "name": "Bajantes",
+      "serviceType": "Bajantes",
+      "description": "Reparamos y sustituimos bajantes en comunidades de propietarios, hoteles, colegios, oficinas y hospitales. Con la cámara vemos su estado antes de decidir qué cambiar.",
+      "url": "https://fontaneriarif.com/bajantes-comunidades/",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/#servicio-mantenimiento",
+      "name": "Mantenimiento de comunidades",
+      "serviceType": "Mantenimiento de comunidades",
+      "description": "Nos ocupamos del mantenimiento del edificio: canalones, impermeabilización de terrazas, chimeneas, tejados y sistemas anti-aves.",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://fontaneriarif.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta un desatasco en Ermua?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de dónde esté el atasco (no es lo mismo un fregadero que una arqueta) y de si hace falta la cámara para localizarlo. Antes de empezar te decimos el precio, y el presupuesto es sin compromiso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Atendéis urgencias en fin de semana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nuestro horario es de lunes a viernes, de 9:00 a 13:00 y de 15:00 a 19:00; sábados y domingos está cerrado. Fuera de horario puedes mandarnos un WhatsApp al 605 711 081 con fotos de la avería y te contestamos al abrir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Merece la pena la aerotermia en Bizkaia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En muchas casas, sí. La aerotermia saca hasta un 80 % de su energía del aire, y los inviernos suaves de Bizkaia le favorecen. Que compense depende del aislamiento, de si tienes suelo radiante o radiadores y de lo que gastas ahora en calefacción. Lo estudiamos en tu vivienda y te damos presupuesto sin compromiso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Gestionáis los permisos de gas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Somos instaladores autorizados de calderas, así que al terminar te entregamos la documentación que pide la normativa para poner la instalación en marcha."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajáis con comunidades de vecinos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Trabajamos con comunidades de propietarios en bajantes, arquetas, desatascos, canalones, impermeabilización de terrazas, tejados, chimeneas y sistemas anti-aves. También con hoteles, colegios, oficinas y hospitales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hacéis la reforma del baño completa o solo la fontanería?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Completa. Tenemos fontaneros, albañiles, electricistas y pintores, así que no tienes que buscar ni coordinar a nadie más. También adaptamos baños para movilidad reducida y cambiamos bañeras por platos de ducha."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué localidades trabajáis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estamos en Ermua y trabajamos en Ermua y alrededores: Eibar, Mallabia, Zaldibar, Elgeta, Berriz, Durango y Elorrio."
+          }
+        }
+      ]
+    }
+  ]
+}

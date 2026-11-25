@@ -1,0 +1,24 @@
+# Fontanería RIF · https://fontaneriarif.com
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# Buscadores con IA: permitidos a propósito para que puedan citar y recomendar el negocio
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://fontaneriarif.com/sitemap.xml

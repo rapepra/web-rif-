@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { negocio, servicios } from '../data/negocio';
+const conPagina = servicios.filter((s) => s.url);
+---
+<Base title="Página no encontrada | Fontanería RIF" description="Esta página no existe. Llama a Fontanería RIF al 605 711 081 o vuelve a nuestros servicios de fontanería en Ermua." path="/404/" esPath={null} noindex quoteHref="/contacto/">
+  <section class="hero lhero" aria-labelledby="h1">
+    <div class="wrap" style="max-width:820px">
+      <p class="chip">Error 404</p>
+      <h1 id="h1">Esta página se nos ha <em>atascado</em></h1>
+      <p class="hero__sub">La dirección no existe o ha cambiado. Si tienes una avería, lo más rápido es llamarnos.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--accent btn--lg" href={`tel:${negocio.telefono.e164}`} data-ub="404"><Icon name="phone" />{negocio.telefono.display}</a>
+        <a class="btn btn--ghost btn--lg" href="/"><Icon name="home" />Ir al inicio</a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap" style="max-width:820px">
+      <h2 style="font-size:1.5rem">Quizá buscabas</h2>
+      <div class="links">
+        {conPagina.map((s) => <a href={s.url}>{s.enlace}<Icon name="arrow" size={18} /></a>)}
+        <a href="/contacto/">Contacto<Icon name="arrow" size={18} /></a>
+      </div>
+    </div>
+  </section>
+</Base>

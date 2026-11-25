@@ -1,0 +1,16 @@
+---
+import Icon from './Icon.astro';
+import { negocio } from '../data/negocio';
+interface Props { titulo?: string; texto?: string; ub?: string }
+const { titulo = '¿Tienes una avería o una obra en mente?', texto = 'Llámanos y te decimos cuándo podemos ir. El presupuesto es sin compromiso.', ub = 'cta_final' } = Astro.props;
+---
+<div class="cta-band">
+  <div>
+    <h2>{titulo}</h2>
+    <p>{texto}</p>
+  </div>
+  <div class="cta-band__btns">
+    <a class="btn btn--accent btn--lg" href={`tel:${negocio.telefono.e164}`} data-ub={ub}><Icon name="phone" />{negocio.telefono.display}</a>
+    <a class="btn btn--wa btn--lg" href={negocio.whatsapp} target="_blank" rel="noopener" data-ub={ub}><Icon name="chat" />WhatsApp</a>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import { negocio } from '../data/negocio';
+// PLANTILLA: revisar con un profesional antes de publicar.
+---
+<Base title="Aviso legal | Fontanería RIF" description="Aviso legal del sitio web de Fontanería RIF, fontaneros en Ermua (Bizkaia)." path="/aviso-legal/" noindex quoteHref="/contacto/">
+  <section class="section"><div class="wrap prose">
+    <h1 style="font-size:2.4rem">Aviso legal</h1>
+    <p><span class="tbd">[PLANTILLA: REVISAR CON ASESORÍA ANTES DE PUBLICAR]</span></p>
+    <h2>Titular del sitio web</h2>
+    <p>En cumplimiento del artículo 10 de la Ley 34/2002 (LSSI-CE), se informa de los datos del titular:</p>
+    <ul>
+      <li>Titular: <span class="tbd">[RAZÓN SOCIAL O NOMBRE DEL AUTÓNOMO]</span>, que opera como {negocio.nombre}</li>
+      <li>NIF/CIF: <span class="tbd">[NIF]</span></li>
+      <li>Domicilio: {negocio.direccionTexto}</li>
+      <li>Teléfono: {negocio.telefono.display} · {negocio.fijo.display}</li>
+      <li>Email: <a href={`mailto:${negocio.email}`}>{negocio.email}</a></li>
+      <li>Inscripción registral: <span class="tbd">[REGISTRO MERCANTIL, SI APLICA]</span></li>
+      <li>Empresa instaladora autorizada: <span class="tbd">[Nº DE REGISTRO]</span></li>
+    </ul>
+    <h2>Condiciones de uso</h2>
+    <p>El acceso a esta web es gratuito e implica la aceptación de estas condiciones. Los contenidos tienen carácter informativo; los precios y condiciones de cada trabajo se fijan en el presupuesto correspondiente.</p>
+    <h2>Propiedad intelectual</h2>
+    <p>Los textos, imágenes, logotipos y diseño de esta web pertenecen a su titular o se usan con autorización. No se permite su reproducción sin permiso expreso.</p>
+    <h2>Responsabilidad</h2>
+    <p>El titular no se hace responsable del mal uso de los contenidos ni de los daños derivados de interrupciones técnicas ajenas a su control. Los enlaces a sitios de terceros se ofrecen solo como referencia.</p>
+    <h2>Legislación aplicable</h2>
+    <p>Estas condiciones se rigen por la legislación española. <span class="tbd">[FUERO / JUZGADOS COMPETENTES]</span></p>
+  </div></section>
+</Base>

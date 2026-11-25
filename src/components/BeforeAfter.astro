@@ -1,0 +1,24 @@
+---
+// Comparador antes/después: input range nativo (accesible con teclado) + clip-path. JS mínimo: actualizar --pos.
+import Icon from './Icon.astro';
+import Escena from './Escena.astro';
+import { marcas } from '../data/negocio';
+interface Props { escena: 'bano' | 'cocina' | 'bajante'; titulo: string; lugar: string; texto: string }
+const { escena, titulo, lugar, texto } = Astro.props;
+---
+<figure class="proj">
+  <div class="ba" data-ba>
+    <Escena tipo={escena} estado="despues" />
+    <Escena tipo={escena} estado="antes" class="ba__before" />
+    <span class="ba__tag ba__tag--l">Antes</span>
+    <span class="ba__tag ba__tag--r">Después</span>
+    <span class="ba__line" aria-hidden="true"><span class="ba__knob"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></span></span>
+    <span class="ba__ph tbd">[FOTOS REALES DEL CLIENTE]</span>
+    <input class="ba__range" type="range" min="0" max="100" value="50" aria-label={`Desliza para comparar antes y después: ${titulo}`} />
+  </div>
+  <figcaption>
+    <span class="proj__place"><Icon name="pin" size={16} /><Fragment set:html={marcas(lugar)} /></span>
+    <h3>{titulo}</h3>
+    <p set:html={marcas(texto)} />
+  </figcaption>
+</figure>

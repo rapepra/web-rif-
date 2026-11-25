@@ -1,0 +1,184 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Plumber",
+      "@id": "https://fontaneriarif.com/#negocio",
+      "name": "Fontanería RIF",
+      "alternateName": "RIF Desatascos",
+      "description": "Fontaneros en Ermua (Bizkaia) con más de 20 años de experiencia: desatascos, fugas, calderas, calefacción y aerotermia, aire acondicionado, gas y reformas de baño y cocina para particulares y comunidades.",
+      "url": "https://fontaneriarif.com/",
+      "logo": "https://fontaneriarif.com/logo.svg",
+      "image": [
+        "https://fontaneriarif.com/og-fontaneria-rif.jpg"
+      ],
+      "telephone": "+34605711081",
+      "email": "riffontaneria@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C/ Marqués de Valdespina",
+        "addressLocality": "Ermua",
+        "postalCode": "48260",
+        "addressRegion": "Bizkaia",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.1868,
+        "longitude": -2.5011
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Fontaner%C3%ADa%20RIF%2C%20C%2F%20Marqu%C3%A9s%20de%20Valdespina%2C%2048260%20Ermua",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "15:00",
+          "closes": "19:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+34605711081",
+          "contactType": "customer service",
+          "areaServed": "ES",
+          "availableLanguage": [
+            "es",
+            "eu"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+34943579580",
+          "contactType": "customer service",
+          "areaServed": "ES",
+          "availableLanguage": [
+            "es",
+            "eu"
+          ]
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ],
+      "knowsLanguage": [
+        "es",
+        "eu"
+      ],
+      "priceRange": "€€",
+      "sameAs": []
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://fontaneriarif.com/contacto/#webpage",
+      "url": "https://fontaneriarif.com/contacto/",
+      "name": "Contacto · Fontaneros en Ermua | Fontanería RIF",
+      "inLanguage": "es-ES",
+      "isPartOf": {
+        "@id": "https://fontaneriarif.com/#web"
+      },
+      "about": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fontaneriarif.com/contacto/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://fontaneriarif.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contacto",
+          "item": "https://fontaneriarif.com/contacto/"
+        }
+      ]
+    }
+  ]
+}

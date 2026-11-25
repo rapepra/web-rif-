@@ -1,0 +1,43 @@
+---
+import Icon from './Icon.astro';
+import Logo from './Logo.astro';
+import { negocio } from '../data/negocio';
+interface Props { variant?: 'full' | 'landing'; lang?: 'es' | 'eu'; esPath?: string; euPath?: string | null }
+const { variant = 'full', lang = 'es', esPath = '/', euPath = '/eu/' } = Astro.props;
+const nav = [
+  ['Servicios', '/#servicios'],
+  ['Nosotros', '/#nosotros'],
+  ['Proyectos', '/#proyectos'],
+  ['Opiniones', '/#opiniones'],
+  ['Zona', '/#zona'],
+  ['Preguntas', '/#preguntas'],
+  ['Contacto', '/contacto/'],
+];
+---
+<header class:list={['hdr', { 'hdr--landing': variant === 'landing' }]}>
+  <div class="wrap hdr__in">
+    <Logo href={lang === 'eu' ? '/eu/' : '/'} />
+    {variant === 'full' && (
+      <nav class="nav" aria-label="Principal">
+        {nav.map(([t, h]) => <a href={h}>{t}</a>)}
+      </nav>
+    )}
+    {variant === 'full' && (
+      <div class="lang" aria-label="Idioma">
+        <a href={esPath} hreflang="es" lang="es" aria-current={lang === 'es' ? 'true' : undefined}>ES</a>
+        <a href={euPath ?? '/eu/'} hreflang="eu" lang="eu" aria-current={lang === 'eu' ? 'true' : undefined}>EU</a>
+      </div>
+    )}
+    <a class="btn btn--accent hdr__tel" href={`tel:${negocio.telefono.e164}`} data-ub="cabecera">
+      <Icon name="phone" size={18} />{negocio.telefono.display}
+    </a>
+    {variant === 'full' && (
+      <details class="menu">
+        <summary aria-label="Abrir menú"><Icon name="menu" /></summary>
+        <nav class="menu__panel" aria-label="Menú móvil">
+          {nav.map(([t, h]) => <a href={h}>{t}</a>)}
+        </nav>
+      </details>
+    )}
+  </div>
+</header>

@@ -1,0 +1,316 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Plumber",
+      "@id": "https://fontaneriarif.com/#negocio",
+      "name": "Fontanería RIF",
+      "alternateName": "RIF Desatascos",
+      "description": "Fontaneros en Ermua (Bizkaia) con más de 20 años de experiencia: desatascos, fugas, calderas, calefacción y aerotermia, aire acondicionado, gas y reformas de baño y cocina para particulares y comunidades.",
+      "url": "https://fontaneriarif.com/",
+      "logo": "https://fontaneriarif.com/logo.svg",
+      "image": [
+        "https://fontaneriarif.com/og-fontaneria-rif.jpg"
+      ],
+      "telephone": "+34605711081",
+      "email": "riffontaneria@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C/ Marqués de Valdespina",
+        "addressLocality": "Ermua",
+        "postalCode": "48260",
+        "addressRegion": "Bizkaia",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.1868,
+        "longitude": -2.5011
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Fontaner%C3%ADa%20RIF%2C%20C%2F%20Marqu%C3%A9s%20de%20Valdespina%2C%2048260%20Ermua",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "15:00",
+          "closes": "19:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+34605711081",
+          "contactType": "customer service",
+          "areaServed": "ES",
+          "availableLanguage": [
+            "es",
+            "eu"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+34943579580",
+          "contactType": "customer service",
+          "areaServed": "ES",
+          "availableLanguage": [
+            "es",
+            "eu"
+          ]
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ],
+      "knowsLanguage": [
+        "es",
+        "eu"
+      ],
+      "priceRange": "€€",
+      "sameAs": []
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fontaneriarif.com/desatascos-ermua/#servicio-desatascos",
+      "name": "Desatascos en Ermua",
+      "serviceType": "Desatascos",
+      "description": "Desatascamos fregaderos, inodoros, tuberías y arquetas en Ermua y alrededores, y eliminamos los malos olores. Lo hace RIF Desatascos, nuestra unidad especializada, en pisos, locales y comunidades.",
+      "url": "https://fontaneriarif.com/desatascos-ermua/",
+      "provider": {
+        "@id": "https://fontaneriarif.com/#negocio"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ermua",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Eibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mallabia",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Zaldibar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elgeta",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Gipuzkoa"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Berriz",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Durango",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Elorrio",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Bizkaia"
+          }
+        }
+      ],
+      "alternateName": "RIF Desatascos"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://fontaneriarif.com/desatascos-ermua/#webpage",
+      "url": "https://fontaneriarif.com/desatascos-ermua/",
+      "name": "Desatascos en Ermua · Tuberías y arquetas | RIF Desatascos",
+      "inLanguage": "es-ES",
+      "isPartOf": {
+        "@id": "https://fontaneriarif.com/#web"
+      },
+      "about": {
+        "@id": "https://fontaneriarif.com/desatascos-ermua/#servicio-desatascos"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fontaneriarif.com/desatascos-ermua/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://fontaneriarif.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Desatascos en Ermua",
+          "item": "https://fontaneriarif.com/desatascos-ermua/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://fontaneriarif.com/desatascos-ermua/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta un desatasco en Ermua?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de dónde esté el atasco (no es lo mismo un fregadero que una arqueta) y de si hace falta la cámara para localizarlo. Antes de empezar te decimos el precio, y el presupuesto es sin compromiso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Atendéis urgencias en fin de semana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nuestro horario es de lunes a viernes, de 9:00 a 13:00 y de 15:00 a 19:00; sábados y domingos está cerrado. Fuera de horario puedes mandarnos un WhatsApp al 605 711 081 con fotos de la avería y te contestamos al abrir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué hacéis si el atasco vuelve a aparecer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si un atasco se repite, casi siempre hay una causa detrás: grasa acumulada, poca pendiente, una rotura o raíces. Con la videoinspección por cámara vemos el interior de la tubería y te explicamos qué conviene reparar para que no vuelva."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Desatascáis arquetas y bajantes de comunidades?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Desatascamos arquetas, bajantes y colectores de comunidades de propietarios, y también reparamos o sustituimos la bajante si está dañada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo quitáis el olor a alcantarilla?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Primero buscamos de dónde viene: un sifón seco o mal colocado, una arqueta sucia, una ventilación mal resuelta o una tubería rota. Después lo arreglamos en el origen, para que el olor no vuelva."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué localidades trabajáis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estamos en Ermua y trabajamos en Ermua y alrededores: Eibar, Mallabia, Zaldibar, Elgeta, Berriz, Durango y Elorrio."
+          }
+        }
+      ]
+    }
+  ]
+}

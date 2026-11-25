@@ -1,0 +1,189 @@
+---
+/**
+ * LANDING MODELO: Desatascos en Ermua
+ * Sirve a la vez como página SEO y como destino de Google Ads (variante «landing»: sin menú de navegación).
+ * El resto de servicios (/calderas-ermua/, /reforma-bano-ermua/…) y las páginas de localidad
+ * (/fontanero-eibar/…) se construyen copiando esta estructura.
+ */
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import OpenChip from '../components/OpenChip.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Faq from '../components/Faq.astro';
+import Steps from '../components/Steps.astro';
+import Reviews from '../components/Reviews.astro';
+import ContactForm from '../components/ContactForm.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { SITE, negocio, zona, servicios, faqsDesatascos } from '../data/negocio';
+import { grafo, servicio, webPage, faqPage, breadcrumbs, plumber } from '../lib/schema';
+
+const path = '/desatascos-ermua/';
+const title = 'Desatascos en Ermua · Tuberías y arquetas | RIF Desatascos';
+const description =
+  'Desatascos en Ermua: fregaderos, inodoros, tuberías y arquetas. Cámara CCTV para atascos que se repiten. Presupuesto sin compromiso: 605 711 081.';
+
+const migas = [
+  { nombre: 'Inicio', path: '/' },
+  { nombre: 'Desatascos en Ermua', path },
+];
+const svc = servicios.find((s) => s.id === 'desatascos')!;
+const schema = grafo(
+  plumber(),
+  { ...servicio(svc), name: 'Desatascos en Ermua', alternateName: 'RIF Desatascos' },
+  webPage({ path, titulo: title, about: `${SITE}${path}#servicio-desatascos` }),
+  breadcrumbs(migas),
+  faqPage(faqsDesatascos, path),
+);
+
+const relacionados = servicios.filter((s) => ['fugas', 'videoinspeccion', 'bajantes'].includes(s.id));
+---
+<Base title={title} description={description} path={path} variant="landing" schema={schema}>
+
+  <!-- ═════════ HERO + FORMULARIO (todo por encima del pliegue en escritorio) ═════════ -->
+  <section class="hero lhero" aria-labelledby="h1">
+    <div class="wrap hero__grid">
+      <div>
+        <Breadcrumbs migas={migas} />
+        <OpenChip />
+        <h1 id="h1">Desatascos en Ermua: <em>fregaderos, inodoros, tuberías y arquetas</em></h1>
+        <p class="answer">RIF Desatascos, la unidad de desatascos de Fontanería RIF, desatasca fregaderos, inodoros, tuberías y arquetas en Ermua y alrededores, y elimina los malos olores. Si el atasco se repite, lo revisamos con cámara para arreglar la causa.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--accent btn--lg" href={`tel:${negocio.telefono.e164}`} data-ub="landing_hero">
+            <Icon name="phone" />
+            <span class="btn-col">Llamar ahora<span class="btn__sub">{negocio.telefono.display}</span></span>
+          </a>
+          <div class="hero__ctas-row">
+            <a class="btn btn--wa btn--lg" href={negocio.whatsapp} target="_blank" rel="noopener" data-ub="landing_hero"><Icon name="chat" />WhatsApp</a>
+            <a class="btn btn--ghost btn--lg" href="#contacto"><Icon name="doc" />Presupuesto</a>
+          </div>
+        </div>
+        <ul class="ticks">
+          <li><Icon name="check" size={18} />Pisos, locales y comunidades de propietarios</li>
+          <li><Icon name="check" size={18} />Videoinspección con cámara CCTV robotizada (Ø 75–1200 mm)</li>
+          <li><Icon name="check" size={18} />Presupuesto sin compromiso antes de empezar</li>
+        </ul>
+      </div>
+      <div id="contacto">
+        <ContactForm id="f-land" servicio="Desatasco" titulo="¿Atasco? Pide presupuesto" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ QUÉ DESATASCAMOS ═════════ -->
+  <section class="section" aria-labelledby="que-t">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Qué desatascamos</p>
+        <h2 class="h2" id="que-t">Del fregadero de casa a la arqueta de la comunidad</h2>
+        <p class="lead">Atendemos atascos en viviendas, locales y edificios de Ermua, Eibar, Mallabia, Zaldibar y el resto de la comarca.</p>
+      </div>
+      <ul class="tiles">
+        <li class="tile"><Icon name="droplet" size={28} /><h3>Fregaderos y lavabos</h3><p>Grasa, restos de comida y cal que hacen que el agua no baje.</p></li>
+        <li class="tile"><Icon name="pipe" size={28} /><h3>Inodoros</h3><p>Inodoros que se atascan o que suben de nivel al tirar de la cadena.</p></li>
+        <li class="tile"><Icon name="wrench" size={28} /><h3>Tuberías y desagües</h3><p>Duchas, bañeras y tramos de tubería de la vivienda o del local.</p></li>
+        <li class="tile"><Icon name="building" size={28} /><h3>Arquetas y bajantes</h3><p>Arquetas, colectores y bajantes de comunidades y edificios.</p></li>
+        <li class="tile"><Icon name="wind" size={28} /><h3>Malos olores</h3><p>Buscamos de dónde sale el olor a alcantarilla y lo arreglamos en el origen.</p></li>
+        <li class="tile"><Icon name="camera" size={28} /><h3>Atascos que vuelven</h3><p>Revisión con cámara para ver la causa: roturas, raíces, poca pendiente o grasa.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═════════ SEÑALES + CÁMARA ═════════ -->
+  <section class="section section--soft" aria-labelledby="senal-t">
+    <div class="wrap cols">
+      <div>
+        <p class="eyebrow">Cuándo llamar</p>
+        <h2 class="h2" id="senal-t">Señales de que tienes un atasco</h2>
+        <p>Si notas alguna de estas señales, es mejor actuar pronto: un atasco pequeño se arregla antes y sale más barato que uno que ya ha provocado un retorno de agua.</p>
+        <ul class="signs">
+          <li><Icon name="clock" size={20} />El agua tarda cada vez más en irse por el fregadero, la ducha o el lavabo.</li>
+          <li><Icon name="droplet" size={20} />Oyes gorgoteos en los desagües al usar otro grifo o al tirar de la cadena.</li>
+          <li><Icon name="wind" size={20} />Hay olor a alcantarilla en el baño, la cocina o el portal.</li>
+          <li><Icon name="pipe" size={20} />Al tirar de la cadena, sube el agua por la ducha o el plato.</li>
+          <li><Icon name="building" size={20} />En la comunidad, rebosa una arqueta o hay humedades junto a la bajante.</li>
+        </ul>
+      </div>
+      <figure class="cctv" style="margin:0">
+        <svg viewBox="0 0 600 340" role="img" aria-label="Esquema de una videoinspección: la cámara avanza por el interior de la tubería y muestra el atasco">
+          <rect width="600" height="340" fill="#0A1F3D"/>
+          <path d="M0 120h600M0 220h600" stroke="#1D63C7" stroke-width="3"/>
+          <rect x="0" y="122" width="600" height="96" fill="#0F2D57"/>
+          <path d="M430 218c10-30 40-50 70-58 30 8 60 28 70 58Z" fill="#6E675B"/>
+          <g transform="translate(120 140)"><rect width="110" height="56" rx="14" fill="#FFB020"/><circle cx="110" cy="28" r="20" fill="#0A1F3D" stroke="#FFB020" stroke-width="6"/><circle cx="110" cy="28" r="7" fill="#60A5FA"/><circle cx="20" cy="62" r="10" fill="#1E293B"/><circle cx="90" cy="62" r="10" fill="#1E293B"/></g>
+          <path d="M240 168l180-30v60z" fill="#60A5FA" opacity=".18"/>
+          <path d="M0 168h120" stroke="#94A3B8" stroke-width="4" stroke-dasharray="10 8"/>
+          <text x="24" y="66" fill="#fff" font-family="system-ui,sans-serif" font-size="22" font-weight="700">Videoinspección CCTV</text>
+          <text x="24" y="94" fill="#B9D4F6" font-family="system-ui,sans-serif" font-size="16">Tuberías de 75 a 1200 mm de diámetro</text>
+          <text x="440" y="270" fill="#FFB020" font-family="system-ui,sans-serif" font-size="16" font-weight="700">Atasco localizado</text>
+        </svg>
+        <figcaption class="cctv__cap">
+          <h3 style="font-size:1.2rem;color:#fff">Vemos el problema antes de abrir</h3>
+          <p>Con la cámara robotizada recorremos la tubería por dentro y localizamos el atasco, la rotura o las raíces. Así sabes qué hay que reparar, dónde y por qué, sin levantar el suelo para buscarlo.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═════════ PROCESO ═════════ -->
+  <section class="section" aria-labelledby="proc-t">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2 class="h2" id="proc-t">Así resolvemos un atasco</h2>
+      </div>
+      <Steps pasos={[
+        { t: 'Nos cuentas qué pasa', d: 'Llama o manda un WhatsApp con una foto o un vídeo del desagüe. Con eso ya nos hacemos una idea.' },
+        { t: 'Localizamos el atasco', d: 'Revisamos la instalación y, si hace falta, metemos la cámara. Te damos el precio antes de empezar.' },
+        { t: 'Desatascamos y comprobamos', d: 'Eliminamos el atasco, comprobamos que el agua corre bien y te decimos si conviene reparar algo.' },
+      ]} />
+    </div>
+  </section>
+
+  <!-- ═════════ RESEÑA RELACIONADA ═════════ -->
+  <section class="section section--soft" aria-labelledby="op-t">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Opiniones</p>
+        <h2 class="h2" id="op-t">Clientes de la zona</h2>
+      </div>
+      <Reviews solo={['Raul Aldalur', 'Mikel Zuloaga']} />
+    </div>
+  </section>
+
+  <!-- ═════════ FAQ ═════════ -->
+  <section class="section" id="preguntas" aria-labelledby="faq-t">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2 class="h2" id="faq-t">Preguntas sobre desatascos en Ermua</h2>
+      </div>
+      <Faq faqs={faqsDesatascos} />
+    </div>
+  </section>
+
+  <!-- ═════════ CTA FINAL ═════════ -->
+  <section class="section section--soft" aria-label="Llamada a la acción">
+    <div class="wrap">
+      <CtaBand titulo="¿El agua no baja? Llámanos" texto="Desatascos en Ermua y alrededores, de lunes a viernes. Presupuesto sin compromiso." ub="landing_cta" />
+    </div>
+  </section>
+
+  <!-- ═════════ ENLAZADO INTERNO: servicios relacionados + localidades ═════════ -->
+  <section class="section" aria-labelledby="rel-t">
+    <div class="wrap cols">
+      <div>
+        <h2 id="rel-t" style="font-size:1.5rem">Servicios relacionados</h2>
+        <div class="links">
+          {relacionados.map((s) => <a href={s.url} data-pendiente>{s.enlace}<Icon name="arrow" size={18} /></a>)}
+          <a href="/#servicios">Todos los servicios de Fontanería RIF<Icon name="arrow" size={18} /></a>
+        </div>
+      </div>
+      <div>
+        <h2 style="font-size:1.5rem">Desatascos cerca de Ermua</h2>
+        <ul class="towns" style="margin-top:0">
+          {zona.filter((z) => z.slug).map((z) => <li><a href={`/${z.slug}/`} data-pendiente><Icon name="pin" size={18} />{z.nombre}</a></li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+</Base>

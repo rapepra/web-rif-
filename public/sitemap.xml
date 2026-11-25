@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://fontaneriarif.com/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://fontaneriarif.com/"/>
+    <xhtml:link rel="alternate" hreflang="eu-ES" href="https://fontaneriarif.com/eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fontaneriarif.com/"/>
+  </url>
+  <url>
+    <loc>https://fontaneriarif.com/eu/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://fontaneriarif.com/"/>
+    <xhtml:link rel="alternate" hreflang="eu-ES" href="https://fontaneriarif.com/eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fontaneriarif.com/"/>
+  </url>
+  <url><loc>https://fontaneriarif.com/desatascos-ermua/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://fontaneriarif.com/contacto/</loc><lastmod>2026-11-25</lastmod></url>
+
+  <!-- ARQUITECTURA PREVISTA: descomentar cada URL cuando su página esté publicada.
+  <url><loc>https://fontaneriarif.com/calderas-ermua/</loc></url>
+  <url><loc>https://fontaneriarif.com/reforma-bano-ermua/</loc></url>
+  <url><loc>https://fontaneriarif.com/aerotermia-ermua/</loc></url>
+  <url><loc>https://fontaneriarif.com/fugas-y-humedades/</loc></url>
+  <url><loc>https://fontaneriarif.com/videoinspeccion-tuberias/</loc></url>
+  <url><loc>https://fontaneriarif.com/bajantes-comunidades/</loc></url>
+  <url><loc>https://fontaneriarif.com/fontanero-eibar/</loc></url>
+  <url><loc>https://fontaneriarif.com/fontanero-mallabia/</loc></url>
+  <url><loc>https://fontaneriarif.com/fontanero-zaldibar/</loc></url>
+  <url><loc>https://fontaneriarif.com/fontanero-elgeta/</loc></url>
+  <url><loc>https://fontaneriarif.com/fontanero-berriz/</loc></url>
+  <url><loc>https://fontaneriarif.com/fontanero-durango/</loc></url>
+  <url><loc>https://fontaneriarif.com/fontanero-elorrio/</loc></url>
+  -->
+</urlset>

@@ -1,0 +1,268 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import OpenChip from '../components/OpenChip.astro';
+import Faq from '../components/Faq.astro';
+import Steps from '../components/Steps.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
+import Reviews from '../components/Reviews.astro';
+import MapFacade from '../components/MapFacade.astro';
+import ContactForm from '../components/ContactForm.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { negocio, grupos, zona, faqsHome, proyectos, marcas } from '../data/negocio';
+import { grafo, plumber, website, webPage, todosLosServicios, faqPage } from '../lib/schema';
+
+const title = 'Fontaneros en Ermua · Calderas y reformas | Fontanería RIF';
+const description =
+  'Fontaneros en Ermua con +20 años: desatascos, fugas, calderas, aerotermia y reformas de baño. Presupuesto sin compromiso. Llama al 605 711 081.';
+
+const schema = grafo(
+  website(),
+  plumber(),
+  webPage({ path: '/', titulo: title }),
+  ...todosLosServicios(),
+  faqPage(faqsHome, '/'),
+);
+
+const rapidos = [
+  { t: 'Atasco', i: 'pipe', h: '/desatascos-ermua/', ok: true },
+  { t: 'Fuga o humedad', i: 'droplet', h: '/fugas-y-humedades/' },
+  { t: 'Caldera o termo', i: 'flame', h: '/calderas-ermua/' },
+  { t: 'Reforma de baño', i: 'bath', h: '/reforma-bano-ermua/' },
+];
+
+// Reseñas con AggregateRating: bloque desactivado a propósito (ver comentario en el HTML).
+const reviewsComentado = `<!--
+  RESEÑAS EN JSON-LD — DESACTIVADO
+  Motivos: (1) no tenemos la puntuación de cada reseña [CONFIRMAR]; (2) con solo 3 reseñas el
+  AggregateRating es débil; (3) Google no muestra estrellas de reseñas «autopublicadas» de un
+  LocalBusiness en su propia web. Activar solo con datos reales y verificables (p. ej. de Google Business Profile).
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Plumber","@id":"https://fontaneriarif.com/#negocio",
+   "aggregateRating":{"@type":"AggregateRating","ratingValue":"[X]","reviewCount":"3","bestRating":"5"},
+   "review":[
+    {"@type":"Review","author":{"@type":"Person","name":"Mikel Zuloaga"},"reviewRating":{"@type":"Rating","ratingValue":"[X]"},"reviewBody":"[TEXTO LITERAL]"},
+    {"@type":"Review","author":{"@type":"Person","name":"Raul Aldalur"},"reviewRating":{"@type":"Rating","ratingValue":"[X]"},"reviewBody":"[TEXTO LITERAL]"},
+    {"@type":"Review","author":{"@type":"Organization","name":"Recoex SL"},"reviewRating":{"@type":"Rating","ratingValue":"[X]"},"reviewBody":"[TEXTO LITERAL]"}
+   ]}
+  </script>
+-->`;
+const zonaComentario = '<!-- ZONA DE SERVICIO: lista de municipios PENDIENTE DE VALIDAR con el cliente (src/data/negocio.ts) -->';
+---
+<Base title={title} description={description} path="/" euPath="/eu/" schema={schema}>
+  <Fragment slot="head" set:html={reviewsComentado} />
+
+  <!-- ═════════ HERO ═════════ -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap hero__grid">
+      <div>
+        <OpenChip />
+        <h1 id="h1">Fontaneros en Ermua: <em>reparaciones, calderas y reformas de baño</em></h1>
+        <p class="hero__sub">Más de 20 años arreglando averías, instalando calderas y reformando baños en Ermua y alrededores. Te damos presupuesto sin compromiso.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--accent btn--lg" href={`tel:${negocio.telefono.e164}`} data-ub="hero">
+            <Icon name="phone" />
+            <span class="btn-col">Llamar ahora<span class="btn__sub">{negocio.telefono.display}</span></span>
+          </a>
+          <div class="hero__ctas-row">
+            <a class="btn btn--wa btn--lg" href={negocio.whatsapp} target="_blank" rel="noopener" data-ub="hero"><Icon name="chat" />WhatsApp</a>
+            <a class="btn btn--ghost btn--lg" href="#contacto"><Icon name="doc" />Presupuesto</a>
+          </div>
+        </div>
+        <p class="hero__alt">¿Prefieres el fijo? <a href={`tel:${negocio.fijo.e164}`} data-ub="hero_fijo">{negocio.fijo.display}</a></p>
+      </div>
+
+      <div class="pick">
+        <p class="pick__t">¿Qué te pasa? Empieza por aquí</p>
+        <ul class="pick__list">
+          {rapidos.map((r) => (
+            <li><a href={r.h} data-pendiente={r.ok ? undefined : ''}><Icon name={r.i} size={26} />{r.t}</a></li>
+          ))}
+        </ul>
+        <p class="pick__foot"><Icon name="clock" size={18} />{negocio.horarioCorto} · Sáb. y dom. cerrado</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Franja de confianza -->
+  <div class="wrap trust">
+    <ul class="trust__in">
+      <li class="trust__item"><Icon name="shield" /><div><strong>Instaladores autorizados</strong><span>de calderas</span></div></li>
+      <li class="trust__item"><Icon name="clock" /><div><strong>Más de 20 años</strong><span>de oficio en Ermua</span></div></li>
+      <li class="trust__item"><Icon name="doc" /><div><strong>Presupuesto</strong><span>sin compromiso</span></div></li>
+      <li class="trust__item"><Icon name="star" /><div><strong><a href="#opiniones">Opiniones reales</a></strong><span>de clientes y empresas</span></div></li>
+    </ul>
+  </div>
+
+  <!-- ═════════ SERVICIOS ═════════ -->
+  <section class="section" id="servicios" aria-labelledby="serv-t">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Servicios</p>
+        <h2 class="h2" id="serv-t">Todo lo que hace falta en casa o en tu comunidad, con un solo equipo</h2>
+        <p class="lead">Fontanería RIF es una empresa de Ermua con fontaneros, gasistas, calefactores, albañiles, electricistas y pintores. Trabajamos para particulares y comunidades de propietarios en Ermua y alrededores.</p>
+      </div>
+      <div class="groups">
+        {grupos.map((g) => (
+          <section class="group" aria-labelledby={`g-${g.id}`}>
+            <div class="group__head">
+              <span class="group__icon"><Icon name={g.icono} size={26} /></span>
+              <h3 id={`g-${g.id}`}>{g.nombre}</h3>
+            </div>
+            <p class="group__intro">{g.intro}</p>
+            <div class="svcs">
+              {g.servicios.map((s) => (
+                <article class="svc">
+                  {s.id === 'desatascos' && <span class="svc__badge">RIF Desatascos</span>}
+                  <h4><Icon name={s.icono} size={22} />{s.nombre}</h4>
+                  <p set:html={marcas(s.texto)} />
+                  {s.url && (
+                    <a class="svc__link" href={s.url} data-pendiente={s.lista ? undefined : ''}>
+                      {s.enlace}<Icon name="arrow" size={18} />
+                    </a>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ POR QUÉ RIF + SOBRE NOSOTROS (E-E-A-T) ═════════ -->
+  <section class="section dark" id="nosotros" aria-labelledby="why-t">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Por qué RIF</p>
+        <h2 class="h2" id="why-t">Oficio de más de 20 años y un equipo que lo hace todo</h2>
+      </div>
+      <div class="why">
+        <ul class="why__list">
+          <li class="why__item"><Icon name="users" /><div><h3>Un solo equipo para toda la obra</h3><p>Fontanería, gas, calefacción, albañilería, electricidad y pintura. No tienes que coordinar gremios.</p></div></li>
+          <li class="why__item"><Icon name="shield" /><div><h3>Instaladores autorizados</h3><p>Somos instaladores autorizados de calderas: gas, gasoil, eléctricas, de condensación y de pellets.</p></div></li>
+          <li class="why__item"><Icon name="camera" /><div><h3>Vemos antes de romper</h3><p>Cámara CCTV robotizada para tuberías de 75 a 1200 mm: se diagnostica con imagen, no a ciegas.</p></div></li>
+          <li class="why__item"><Icon name="doc" /><div><h3>Precio claro antes de empezar</h3><p>Presupuesto sin compromiso. Sabes lo que vas a pagar antes de que toquemos nada.</p></div></li>
+          <li class="why__item"><Icon name="building" /><div><h3>Casas y edificios</h3><p>Particulares, comunidades de propietarios, hoteles, colegios, oficinas y hospitales.</p></div></li>
+          <li class="why__item"><Icon name="pin" /><div><h3>De aquí</h3><p>Estamos en Ermua, en la calle Marqués de Valdespina. Trabajamos en toda la comarca.</p></div></li>
+        </ul>
+
+        <article class="about" aria-labelledby="about-t">
+          <div class="about__photo"><span class="tbd">[FOTO DEL EQUIPO O DEL TALLER]</span></div>
+          <h3 id="about-t">Sobre Fontanería RIF</h3>
+          <p>Llevamos más de 20 años trabajando en Ermua y alrededores. Somos un equipo multidisciplinar (fontanería, gas, calefacción, albañilería, electricidad y pintura) que se encarga igual de una avería que de una caldera o de la reforma completa de un baño. Además, tenemos nuestra propia unidad de desatascos: RIF Desatascos.</p>
+          <p><span class="tbd">[AÑO DE FUNDACIÓN, NOMBRE Y CARGO DEL RESPONSABLE, Nº DE PERSONAS EN EL EQUIPO]</span></p>
+          <ul class="facts">
+            <li><Icon name="check" size={18} /><span>Instaladores autorizados de calderas · <span class="tbd">[Nº DE REGISTRO DE EMPRESA INSTALADORA]</span></span></li>
+            <li><Icon name="check" size={18} /><span>Seguro de responsabilidad civil · <span class="tbd">[CONFIRMAR]</span></span></li>
+            <li><Icon name="check" size={18} /><span>Videoinspección CCTV robotizada (Ø 75–1200 mm)</span></li>
+            <li><Icon name="check" size={18} /><span>Atención en castellano y euskera <span class="tbd">[CONFIRMAR]</span></span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ PROCESO ═════════ -->
+  <section class="section section--soft" aria-labelledby="proc-t">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2 class="h2" id="proc-t">Tres pasos, sin sorpresas</h2>
+      </div>
+      <Steps />
+    </div>
+  </section>
+
+  <!-- ═════════ PROYECTOS ═════════ -->
+  <section class="section" id="proyectos" aria-labelledby="proy-t">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Proyectos</p>
+        <h2 class="h2" id="proy-t">Antes y después de nuestros trabajos</h2>
+        <p class="lead">Desliza para comparar. <span class="tbd">[SUSTITUIR LAS ILUSTRACIONES POR FOTOS REALES, MISMO ENCUADRE ANTES/DESPUÉS]</span></p>
+      </div>
+      <div class="projects">
+        {proyectos.map((p) => <BeforeAfter {...p} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ RESEÑAS ═════════ -->
+  <section class="section section--soft" id="opiniones" aria-labelledby="op-t">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Opiniones</p>
+        <h2 class="h2" id="op-t">Lo que dicen quienes ya nos han llamado</h2>
+      </div>
+      <Reviews />
+      <div class="reviews__cta">
+        <a class="btn btn--ghost" href={negocio.mapsUrl} target="_blank" rel="noopener" style="color:var(--navy-900)"><Icon name="star" size={18} />Ver la ficha en Google Maps</a>
+        <span class="tbd">[ENLACE A LA FICHA DE GOOGLE BUSINESS PROFILE]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ ZONA ═════════ -->
+  <section class="section" id="zona" aria-labelledby="zona-t">
+    <Fragment set:html={zonaComentario} />
+    <div class="wrap zone">
+      <div>
+        <p class="eyebrow">Zona de servicio</p>
+        <h2 class="h2" id="zona-t">Fontaneros en Ermua y alrededores</h2>
+        <p class="lead">Salimos desde Ermua a domicilios, locales y comunidades de la comarca. Si estás cerca y no ves tu pueblo, llámanos igualmente.</p>
+        <ul class="towns">
+          {zona.map((z) => z.slug
+            ? <li><a href={`/${z.slug}/`} data-pendiente><Icon name="pin" size={18} />Fontanero en {z.nombre}</a></li>
+            : <li><span class="is-home"><Icon name="home" size={18} />{z.nombre} · base</span></li>)}
+        </ul>
+        <span class="tbd">[CONFIRMAR CON EL CLIENTE LA LISTA DE MUNICIPIOS]</span>
+      </div>
+      <MapFacade />
+    </div>
+  </section>
+
+  <!-- ═════════ FAQ ═════════ -->
+  <section class="section section--soft" id="preguntas" aria-labelledby="faq-t">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2 class="h2" id="faq-t">Lo que más nos preguntáis</h2>
+      </div>
+      <Faq faqs={faqsHome} />
+    </div>
+  </section>
+
+  <!-- ═════════ CONTACTO ═════════ -->
+  <section class="section dark" id="contacto" aria-labelledby="contacto-t">
+    <div class="wrap contact">
+      <div>
+        <p class="eyebrow">Contacto</p>
+        <h2 class="h2" id="contacto-t">Cuéntanos qué necesitas</h2>
+        <p class="lead" style="margin-bottom:32px">La forma más rápida es llamar. Si prefieres, déjanos tus datos y te llamamos nosotros.</p>
+        <div class="nap">
+          <div class="nap__item"><Icon name="phone" /><div><strong>Teléfono</strong><a href={`tel:${negocio.telefono.e164}`} data-ub="contacto">{negocio.telefono.display}</a> <span>· fijo </span><a href={`tel:${negocio.fijo.e164}`} data-ub="contacto" style="font-size:1rem">{negocio.fijo.display}</a></div></div>
+          <div class="nap__item"><Icon name="chat" /><div><strong>WhatsApp</strong><a href={negocio.whatsapp} target="_blank" rel="noopener" data-ub="contacto">Escríbenos al {negocio.telefono.display}</a></div></div>
+          <div class="nap__item"><Icon name="mail" /><div><strong>Email</strong><a href={`mailto:${negocio.email}`} style="font-size:1rem">{negocio.email}</a></div></div>
+          <div class="nap__item"><Icon name="pin" /><div><strong>Dirección</strong><span>{negocio.direccionTexto}</span></div></div>
+          <div class="nap__item"><Icon name="clock" /><div style="flex:1"><strong>Horario</strong>
+            <table class="hours">
+              <caption class="sr">Horario de atención</caption>
+              <tbody>
+                <tr data-dia="1,2,3,4,5"><th scope="row">Lunes a viernes</th><td>9:00–13:00 · 15:00–19:00</td></tr>
+                <tr data-dia="6,0"><th scope="row">Sábado y domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:14px"><OpenChip /></div>
+          </div></div>
+        </div>
+      </div>
+      <ContactForm id="f-home" headingLevel="h3" />
+    </div>
+  </section>
+
+  <section class="section" aria-label="Llamada a la acción">
+    <div class="wrap"><CtaBand /></div>
+  </section>
+</Base>
