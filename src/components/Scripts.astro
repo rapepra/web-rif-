@@ -1,7 +1,0 @@
----
-// Inlinea src/scripts/app.js minificado (esbuild, incluido con Astro). 0 peticiones extra.
-import { transformSync } from 'esbuild';
-import fuente from '../scripts/app.js?raw';
-const { code } = transformSync(fuente, { minify: true, target: 'es2019', legalComments: 'none' });
----
-<script is:inline set:html={code} />

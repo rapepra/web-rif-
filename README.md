@@ -1,53 +1,45 @@
-# Fontanería RIF · prototipo de la nueva web
+# Fontanería RIF · versión HTML + CSS
 
-Astro 5 con salida 100 % estática. No usa ningún framework de JS: hay un único script vanilla de unos 4 KB, minificado e inline. Todo el CSS va inline.
+Esta rama (`html-estatico`) contiene la web en **HTML, CSS y JavaScript planos**, sin Node, sin compilación y sin dependencias. Se sube tal cual a cualquier hosting (FTP, Cloudflare Pages, Netlify, GitHub Pages…).
 
-## Verlo
+La versión con Astro, con los datos centralizados y las plantillas, está en la rama `main`.
 
-```bash
-npm install        # solo la primera vez
-npm run build      # genera dist/
-npx serve dist     # abre http://localhost:3000
+## Estructura
+
+```
+index.html                  Home
+desatascos-ermua/index.html Landing modelo (SEO + Google Ads, sin menú)
+contacto/index.html         Contacto
+eu/index.html               Versión en euskera (estructura, por traducir)
+aviso-legal/ privacidad/    Plantillas legales (noindex)
+404.html                    Página de error
+css/estilos.css             Todo el CSS (un solo archivo)
+js/app.js                   Todo el JS: horario abierto/cerrado, cookies, eventos dataLayer, mapa, formulario, antes/después
+robots.txt sitemap.xml llms.txt
+favicon.svg logo.svg apple-touch-icon.png og-fontaneria-rif.jpg
+docs/jsonld/                Copia del JSON-LD para revisarlo
 ```
 
-> La carpeta tiene ":" en el nombre (`cosas presupuesta: webs…`), y eso rompe `npx astro`. Por eso los scripts de `package.json` llaman a Astro con `node node_modules/astro/astro.js`. Usa siempre `npm run …`.
+## Verla en local
 
-## Qué hay
+Los enlaces usan rutas absolutas (`/contacto/`), igual que en producción. Por eso hay que abrirla con un servidor y no con doble clic:
 
-| Ruta | Qué es |
-|---|---|
-| `/` | Home completa: hero, servicios, por qué RIF y sobre nosotros, proceso, antes/después, reseñas, zona, FAQ, contacto |
-| `/desatascos-ermua/` | Landing modelo, válida para SEO y para Google Ads (sin menú) |
-| `/contacto/` | Contacto con NAP, formulario y mapa |
-| `/eu/` | Estructura de la versión en euskera, con textos provisionales |
-| `/aviso-legal/`, `/privacidad/` | Plantillas legales con huecos por rellenar (`noindex`) |
-| `404.html` | Error útil, con teléfono y enlaces |
-| `robots.txt`, `sitemap.xml`, `llms.txt` | En `public/` |
-| `docs/jsonld/` | Copia del JSON-LD de cada página para revisarlo (el que cuenta es el que va dentro del HTML) |
+- VS Code: extensión **Live Server**, clic derecho en `index.html` → *Open with Live Server*.
+- O en la terminal: `python3 -m http.server 8000` → http://localhost:8000
 
-Los enlaces a páginas previstas que aún no existen (`/calderas-ermua/`, `/fontanero-eibar/`…) llevan `data-pendiente`. En el prototipo muestran un aviso en lugar de llevar a un 404. Al crear cada página, quítale ese atributo y descomenta su URL en `sitemap.xml`.
+## Editar sin romper nada
 
-## Dónde se cambia cada cosa
+Al no haber plantillas, **la cabecera, el pie, la barra móvil y los datos del negocio están repetidos en cada página**. Si cambias el teléfono, el horario o la dirección:
 
-- **Datos del negocio (NAP, horario, servicios, zona, reseñas, FAQ):** `src/data/negocio.ts`. Es la única fuente: la web, el JSON-LD y los botones se generan desde aquí.
-- **Placeholders:** cualquier texto `[ENTRE CORCHETES]` en `negocio.ts` sale resaltado en ámbar en pantalla y se elimina del JSON-LD. Busca `[` o `tbd` para ver la lista completa.
-- **Estilos:** `src/styles/global.css`. **JS:** `src/scripts/app.js`.
-- **Euskera:** `EU_LISTO` en `negocio.ts`. Si la versión `/eu/` va a publicarse sin traducir, ponlo a `false`: quita el `hreflang eu-ES` y marca `/eu/` como `noindex`.
+1. Busca y reemplaza en **todos** los `.html` (en VS Code: Ctrl/Cmd + Shift + H).
+2. Revisa también el bloque `<script type="application/ld+json">` de cada página, además de `llms.txt` y `js/app.js` (el horario está en `TRAMOS`).
+
+Los datos pendientes aparecen como `<span class="tbd">[…]</span>`. Para ver la lista completa, busca `class="tbd"`.
 
 ## Antes de publicar
 
-1. Rellenar los `[DATOS A CONFIRMAR]`: número de portal, coordenadas exactas, precios orientativos, nº de registro de instalador, textos literales y notas de las reseñas, municipios de la zona, si el móvil tiene WhatsApp, urgencias en fin de semana.
-2. Fotos reales: antes/después, equipo y hero (en AVIF/WebP con `srcset`).
-3. Formulario: conectar `action` a un endpoint (Netlify Forms, Formspree, Worker…) y lanzar `envio_formulario` solo cuando el envío se confirme (ver `src/scripts/app.js`).
-4. Analítica: descomentar el snippet de GTM/GA4 en `cargarAnalitica()` (`src/scripts/app.js`). Solo se carga tras aceptar las cookies.
-5. Hosting con HTTPS y compresión gzip/brotli (Cloudflare Pages, Netlify…). Los textos legales los tiene que revisar una asesoría.
-6. Google Business Profile: añadir su URL en `sameAs` y en el botón de reseñas.
-
-## Medido en local (Lighthouse 12, móvil, servidor con gzip)
-
-| Página | Rendimiento | Accesibilidad | Buenas prácticas | SEO | LCP | CLS | Peso transferido |
-|---|---|---|---|---|---|---|---|
-| Home | 99 | 100 | 100 | 100 | 1,5 s | 0 | 25 KB |
-| Desatascos | 100 | 100 | 100 | 100 | 1,2–1,3 s | 0 | 17 KB |
-
-Ojo: en esta máquina aproximadamente una de cada tres pasadas sale en torno a 78 de rendimiento, por la carga del propio equipo y no por la web. Después de desplegar, conviene confirmar los números con PageSpeed Insights.
+- Rellenar los `[DATOS A CONFIRMAR]` y poner fotos reales.
+- Formulario: conectar el `action` del `<form>` a un servicio de envío (ver `js/app.js`).
+- Analítica: descomentar el snippet de GTM/GA4 en `cargarAnalitica()` (`js/app.js`).
+- Cada página nueva (`/calderas-ermua/`, `/fontanero-eibar/`…): copiar `desatascos-ermua/index.html`, cambiar los textos, el title, la description, el canonical y el JSON-LD; quitar `data-pendiente` de sus enlaces y descomentar su URL en `sitemap.xml`.
+- Si `/eu/` se publica sin traducir: añadir `noindex` en `eu/index.html` y quitar las líneas `hreflang="eu-ES"` de la home y de `sitemap.xml`.

@@ -1,4 +1,5 @@
-node_modules/
-.astro/
 .DS_Store
+# Restos locales de la versión Astro (rama main)
+node_modules/
 dist/
+.astro/
